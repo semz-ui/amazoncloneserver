@@ -14,6 +14,10 @@ connectDB();
 app.use("/api/store", require("./routes/storeRoutes"));
 app.use("/api/users", require("./routes/userRoutes"));
 
+app.get("/", (req, res) => {
+  res.send("Hi lol, tf you doing here??");
+});
+
 app.use(errorHandler);
 port = process.env.PORT;
 
